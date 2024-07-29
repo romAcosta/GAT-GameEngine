@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5d7ffbbc-b596-4ea0-a42a-81b8855550ae" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../.vs/GameEngine/FileContentIndex/12b2460e-f0f3-4f0d-bc4e-938a6111d116.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.vs/GameEngine/FileContentIndex/12ee5414-4041-441b-80a1-dbd8bc03898e.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.vs/GameEngine/FileContentIndex/8198f703-5dba-496b-bea8-435b03a380ba.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.vs/GameEngine/FileContentIndex/8d1c1f6f-b41f-41c8-af64-c7aa171fea5d.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.vs/GameEngine/FileContentIndex/fbb89469-a5d6-49a2-b66a-828c43fec9c0.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.vs/GameEngine/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../.vs/GameEngine/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.vs/GameEngine/v17/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../.vs/GameEngine/v17/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.vs/GameEngine/v17/ipch/AutoPCH/512fe61b18f14e0c/INPUT.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../../.vs/GameEngine/v17/ipch/AutoPCH/512fe61b18f14e0c/INPUT.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.vs/GameEngine/v17/ipch/AutoPCH/c04326bf7b8206b9/RENDERER.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../../.vs/GameEngine/v17/ipch/AutoPCH/c04326bf7b8206b9/RENDERER.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.vs/GameEngine/v17/ipch/AutoPCH/da8dc52f6b2563fa/ETIME.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../../.vs/GameEngine/v17/ipch/AutoPCH/da8dc52f6b2563fa/ETIME.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.vs/GameEngine/v17/ipch/AutoPCH/fb499869c50b8a2d/MAIN.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../../.vs/GameEngine/v17/ipch/AutoPCH/fb499869c50b8a2d/MAIN.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.vs/GameEngine/v17/ipch/AutoPCH/ff2e21be532bb8ad/MODEL.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../../.vs/GameEngine/v17/ipch/AutoPCH/ff2e21be532bb8ad/MODEL.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Build/bass.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Build/clap.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Build/close-hat.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Build/cowbell.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Build/open-hat.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Build/snare.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Build/test.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Engine.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../Engine.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Engine.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/../Engine.vcxproj.filters" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Model.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model.h" beforeDir="false" afterPath="$PROJECT_DIR$/Model.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RENDERER.CPP" beforeDir="false" afterPath="$PROJECT_DIR$/RENDERER.CPP" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Renderer.h" beforeDir="false" afterPath="$PROJECT_DIR$/Renderer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vector2.h" beforeDir="false" afterPath="$PROJECT_DIR$/Vector2.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../x64/Debug/Engine.log" beforeDir="false" afterPath="$PROJECT_DIR$/../x64/Debug/Engine.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../x64/Debug/Engine.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../x64/Debug/Engine.tlog/CL.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../x64/Debug/Engine.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../x64/Debug/Engine.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../x64/Debug/Engine.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../x64/Debug/Engine.tlog/CL.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../x64/Debug/Engine.tlog/Cl.items.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../x64/Debug/Engine.tlog/Cl.items.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../x64/Debug/Engine.tlog/Lib-link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../x64/Debug/Engine.tlog/Lib-link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../x64/Debug/Engine.tlog/Lib-link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../x64/Debug/Engine.tlog/Lib-link.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../x64/Debug/Engine.tlog/Lib.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../x64/Debug/Engine.tlog/Lib.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../x64/Debug/Input.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../x64/Debug/Input.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../x64/Debug/Model.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../x64/Debug/Model.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../x64/Debug/Particle.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../x64/Debug/Particle.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../x64/Debug/RENDERER.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../x64/Debug/RENDERER.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GameEngine/GameEngine.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../GameEngine/GameEngine.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GameEngine/GameEngine.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/../../GameEngine/GameEngine.vcxproj.filters" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GameEngine/Source/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../GameEngine/Source/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GameEngine/Source/Main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../GameEngine/Source/Main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GameEngine/x64/Debug/Game.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../../GameEngine/x64/Debug/Game.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GameEngine/x64/Debug/Game.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../GameEngine/x64/Debug/Game.tlog/CL.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GameEngine/x64/Debug/Game.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../GameEngine/x64/Debug/Game.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GameEngine/x64/Debug/Game.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../GameEngine/x64/Debug/Game.tlog/CL.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GameEngine/x64/Debug/Game.tlog/Cl.items.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../GameEngine/x64/Debug/Game.tlog/Cl.items.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GameEngine/x64/Debug/Game.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../GameEngine/x64/Debug/Game.tlog/link.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GameEngine/x64/Debug/Game.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../GameEngine/x64/Debug/Game.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GameEngine/x64/Debug/Game.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../GameEngine/x64/Debug/Game.tlog/link.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GameEngine/x64/Debug/Main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../GameEngine/x64/Debug/Main.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GameEngine/x64/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../../GameEngine/x64/Debug/vc143.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GameEngine/x64/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../GameEngine/x64/Debug/vc143.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../x64/Debug/Engine.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../../x64/Debug/Engine.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../x64/Debug/Engine.lib" beforeDir="false" afterPath="$PROJECT_DIR$/../../x64/Debug/Engine.lib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../x64/Debug/Engine.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../x64/Debug/Engine.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../x64/Debug/Game.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../x64/Debug/Game.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../x64/Debug/Game.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../x64/Debug/Game.pdb" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2024" />
+    <option name="minorVersion" value="1.1" />
+    <option name="productBranch" value="Classic" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2j3o44yPo7FepPuV3uUXXluJOob" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "master",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5d7ffbbc-b596-4ea0-a42a-81b8855550ae" name="Changes" comment="" />
+      <created>1720624928083</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1720624928083</updated>
+      <workItem from="1720624929556" duration="3000" />
+      <workItem from="1721237528384" duration="3000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -1,0 +1,20 @@
+﻿  Actor.cpp
+  Audio.cpp
+  Engine.cpp
+  ETime.cpp
+  Font.cpp
+  Input.cpp
+  Model.cpp
+C:\neumont\C++\GAT-GameEngine\GAT-Repo\Engine\Source\Model.cpp(14,41): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\neumont\C++\GAT-GameEngine\GAT-Repo\Engine\Source\Model.cpp(14,35): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\neumont\C++\GAT-GameEngine\GAT-Repo\Engine\Source\Model.cpp(14,29): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\neumont\C++\GAT-GameEngine\GAT-Repo\Engine\Source\Model.cpp(14,23): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\neumont\C++\GAT-GameEngine\GAT-Repo\Engine\Source\Model.cpp(29,41): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\neumont\C++\GAT-GameEngine\GAT-Repo\Engine\Source\Model.cpp(29,35): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\neumont\C++\GAT-GameEngine\GAT-Repo\Engine\Source\Model.cpp(29,29): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\neumont\C++\GAT-GameEngine\GAT-Repo\Engine\Source\Model.cpp(29,23): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Particle.cpp
+  RENDERER.CPP
+  Scene.cpp
+  Text.cpp
+  Engine.vcxproj -> C:\neumont\C++\GAT-GameEngine\GAT-Repo\Bin\EngineRelease\Engine.lib
