@@ -44,7 +44,7 @@ private:
 
 };
 
-extern Engine g_engine;
+
 
 
 

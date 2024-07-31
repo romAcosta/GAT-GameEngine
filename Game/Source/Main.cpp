@@ -9,30 +9,40 @@
 
 int main(int argc, char* argv[])
 {
-	g_engine.Initialize();
 
+	std::unique_ptr<Engine> engine = std::make_unique<Engine>();
+
+	engine->Initialize();
+
+	std::cout << __FILE__ << std::endl;
 
 	//Create Systems
 	Time time;
 
+	int* p = new int(5);
 
 
 	//main loop
 	bool quit = false;
 	while (!quit)
+
 	{
-		if (g_engine.GetInput().GetKeyDown(SDL_SCANCODE_ESCAPE)) {
+		engine->Update();
+		if (engine->GetInput().GetKeyDown(SDL_SCANCODE_ESCAPE)) {
 			quit = true;
 		}
 		time.Tick();
 
-		g_engine.GetRenderer().SetColor(0, 0, 0, 0);
-		g_engine.GetRenderer().BeginFrame();
+		engine->GetRenderer().SetColor(0, 0, 0, 0);
+		engine->GetRenderer().BeginFrame();
 
 		
 
-		g_engine.GetRenderer().EndFrame();
+		engine->GetRenderer().EndFrame();
 	}
-	g_engine.Shutdown();
+
+	engine->Shutdown();
+
+
 	return 0;
 }
