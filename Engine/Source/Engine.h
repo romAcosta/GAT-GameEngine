@@ -1,19 +1,19 @@
 #pragma once
 
-#include "Renderer.h"
-#include "Vector2.h"
-#include "Input.h"
-#include "Particle.h"
-#include "Random.h"
-#include "ETime.h"
-#include "Color.h"
-#include "MathUtils.h"
-#include "Model.h"
-#include "Transform.h"
-#include "Audio.h"
-#include "Text.h"
-#include "Font.h"
-#include "ETime.h"
+#include "Renderer/Renderer.h"
+#include "Math/Vector2.h"
+#include "Input/Input.h"
+#include "Framework/Particle.h"
+#include "Math/Random.h"
+#include "Core/ETime.h"
+#include "Framework/Color.h"
+#include "Math/MathUtils.h"
+#include "Framework/Model.h"
+#include "Framework/Transform.h"
+#include "Audio/Audio.h"
+#include "Renderer/Text.h"
+#include "Renderer/Font.h"
+
 #include <SDL.h>
 #include <SDL_ttf.h>
 
