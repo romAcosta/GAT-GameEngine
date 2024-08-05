@@ -1,4 +1,6 @@
 C:\neumont\C++\GAT-GameEngine\GAT-Repo\Engine\Source\Audio\Audio.cpp;C:\neumont\C++\GAT-GameEngine\GAT-Repo\Temp\EngineRelease\Audio.obj
+C:\neumont\C++\GAT-GameEngine\GAT-Repo\Engine\Source\Core\EAssert.cpp;C:\neumont\C++\GAT-GameEngine\GAT-Repo\Temp\EngineRelease\EAssert.obj
+C:\neumont\C++\GAT-GameEngine\GAT-Repo\Engine\Source\Core\EFile.cpp;C:\neumont\C++\GAT-GameEngine\GAT-Repo\Temp\EngineRelease\EFile.obj
 C:\neumont\C++\GAT-GameEngine\GAT-Repo\Engine\Source\Core\ETime.cpp;C:\neumont\C++\GAT-GameEngine\GAT-Repo\Temp\EngineRelease\ETime.obj
 C:\neumont\C++\GAT-GameEngine\GAT-Repo\Engine\Source\Engine.cpp;C:\neumont\C++\GAT-GameEngine\GAT-Repo\Temp\EngineRelease\Engine.obj
 C:\neumont\C++\GAT-GameEngine\GAT-Repo\Engine\Source\Framework\Actor.cpp;C:\neumont\C++\GAT-GameEngine\GAT-Repo\Temp\EngineRelease\Actor.obj
@@ -9,3 +11,4 @@ C:\neumont\C++\GAT-GameEngine\GAT-Repo\Engine\Source\Input\Input.cpp;C:\neumont\
 C:\neumont\C++\GAT-GameEngine\GAT-Repo\Engine\Source\Renderer\Font.cpp;C:\neumont\C++\GAT-GameEngine\GAT-Repo\Temp\EngineRelease\Font.obj
 C:\neumont\C++\GAT-GameEngine\GAT-Repo\Engine\Source\Renderer\RENDERER.CPP;C:\neumont\C++\GAT-GameEngine\GAT-Repo\Temp\EngineRelease\RENDERER.obj
 C:\neumont\C++\GAT-GameEngine\GAT-Repo\Engine\Source\Renderer\Text.cpp;C:\neumont\C++\GAT-GameEngine\GAT-Repo\Temp\EngineRelease\Text.obj
+C:\neumont\C++\GAT-GameEngine\GAT-Repo\Engine\Source\Renderer\Texture.cpp;C:\neumont\C++\GAT-GameEngine\GAT-Repo\Temp\EngineRelease\Texture.obj

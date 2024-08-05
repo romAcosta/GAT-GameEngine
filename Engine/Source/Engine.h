@@ -14,6 +14,10 @@
 #include "Renderer/Text.h"
 #include "Renderer/Font.h"
 
+#include "Resources/ResourceManager.h"
+
+
+
 #include <SDL.h>
 #include <SDL_ttf.h>
 

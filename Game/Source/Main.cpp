@@ -14,7 +14,15 @@ int main(int argc, char* argv[])
 
 	engine->Initialize();
 
+	//ResourceManager rm = ResourceManager();
+
+
+	res_t texture = ResourceManager::Instance().Get<Texture>("assets/moleup.png", engine->GetRenderer());
+	
+
 	std::cout << __FILE__ << std::endl;
+
+	
 
 	//Create Systems
 	Time time;
@@ -36,7 +44,7 @@ int main(int argc, char* argv[])
 		engine->GetRenderer().SetColor(0, 0, 0, 0);
 		engine->GetRenderer().BeginFrame();
 
-		
+		engine->GetRenderer().DrawTexture(texture.get(), 30, 30);
 
 		engine->GetRenderer().EndFrame();
 	}

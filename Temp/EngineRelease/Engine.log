@@ -1,3 +1,18 @@
 ﻿  Engine.cpp
+  Actor.cpp
+  Model.cpp
+C:\neumont\C++\GAT-GameEngine\GAT-Repo\Engine\Source\Framework\Model.cpp(14,41): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\neumont\C++\GAT-GameEngine\GAT-Repo\Engine\Source\Framework\Model.cpp(14,35): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\neumont\C++\GAT-GameEngine\GAT-Repo\Engine\Source\Framework\Model.cpp(14,29): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\neumont\C++\GAT-GameEngine\GAT-Repo\Engine\Source\Framework\Model.cpp(14,23): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\neumont\C++\GAT-GameEngine\GAT-Repo\Engine\Source\Framework\Model.cpp(29,41): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\neumont\C++\GAT-GameEngine\GAT-Repo\Engine\Source\Framework\Model.cpp(29,35): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\neumont\C++\GAT-GameEngine\GAT-Repo\Engine\Source\Framework\Model.cpp(29,29): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\neumont\C++\GAT-GameEngine\GAT-Repo\Engine\Source\Framework\Model.cpp(29,23): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Particle.cpp
   Scene.cpp
+  RENDERER.CPP
+  Text.cpp
+  Texture.cpp
+sdl2_image.lib(SDL2_image.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in sdl2.lib(SDL2.dll); second definition ignored
   Engine.vcxproj -> C:\neumont\C++\GAT-GameEngine\GAT-Repo\Bin\EngineRelease\Engine.lib

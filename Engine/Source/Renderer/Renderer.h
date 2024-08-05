@@ -2,6 +2,9 @@
 #include <SDL.h>
 #include <string>
 #include <SDL_ttf.h>
+#include <SDL_image.h>
+#include "../Math/Vector2.h"
+#include "Texture.h"
 
 
 class Renderer {
@@ -26,8 +29,12 @@ public:
 	int GetWidth() const { return m_width; }
 	int GetHeight() const { return m_height; }
 
+	void DrawTexture(class Texture* texture, float x, float y, float angle = 0.0f);
+	
 	friend class Text;
-private:
+	friend class Texture;
+
+protected:
 	SDL_Window* m_window{ nullptr };
 	SDL_Renderer* m_renderer{ nullptr };
 

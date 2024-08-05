@@ -31,6 +31,9 @@
     <Filter Include="Source Files\Renderer">
       <UniqueIdentifier>{742db254-46a5-4a64-99ab-6006f2914fce}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Resources">
+      <UniqueIdentifier>{43fc85a7-15ec-491a-8b5e-c8a30d03eb22}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Engine.h">
@@ -81,6 +84,24 @@
     <ClInclude Include="Source\Renderer\Text.h">
       <Filter>Source Files\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Core\EAssert.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Core\EFile.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Renderer\Texture.h">
+      <Filter>Source Files\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Resources\Resource.h">
+      <Filter>Source Files\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Resources\ResourceManager.h">
+      <Filter>Source Files\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Core\Singleton.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Engine.cpp">
@@ -114,6 +135,15 @@
       <Filter>Source Files\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="Source\Renderer\Text.cpp">
+      <Filter>Source Files\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Core\EFile.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Core\EAssert.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Renderer\Texture.cpp">
       <Filter>Source Files\Renderer</Filter>
     </ClCompile>
   </ItemGroup>
