@@ -18,7 +18,9 @@ int main(int argc, char* argv[])
 
 
 	res_t texture = ResourceManager::Instance().Get<Texture>("assets/moleup.png", engine->GetRenderer());
-	
+	res_t<Font> font = ResourceManager::Instance().Get<Font>("Finland.ttf", 12);
+	std::unique_ptr<Text> text = std::make_unique<Text>(font);
+	text->Create(engine->GetRenderer(), "Hello!", { 0, 0, 0, 1 });
 
 	std::cout << __FILE__ << std::endl;
 
@@ -44,8 +46,10 @@ int main(int argc, char* argv[])
 		engine->GetRenderer().SetColor(0, 0, 0, 0);
 		engine->GetRenderer().BeginFrame();
 
-		engine->GetRenderer().DrawTexture(texture.get(), 30, 30);
 
+		
+		engine->GetRenderer().DrawTexture(texture.get(), 30, 30);
+		text->Draw(engine->GetRenderer(), 200, 200);
 		engine->GetRenderer().EndFrame();
 	}
 
