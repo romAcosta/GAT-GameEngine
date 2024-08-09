@@ -1,11 +1,12 @@
 #pragma once
 #include "MathUtils.h"
 #include <cmath>
+#include <string>
 
 
 struct Vector2 {
-	float x;
-	float y;
+	float x = 0;
+	float y = 0;
 
 
 	Vector2() = default;
@@ -65,7 +66,7 @@ struct Vector2 {
 	Vector2 Rotate(float radians) const;
 
 	Vector2 Normalized() const { return *this / Length(); }
-
+	
 
 };
 
@@ -81,3 +82,4 @@ inline Vector2 OnUnitCircle(float angle) {
 	
 	return Vector2{ Math::Cos(Math::DegToRad(angle)),Math::Sin(Math::DegToRad(angle)) };
 }
+

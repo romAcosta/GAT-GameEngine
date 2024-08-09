@@ -5,7 +5,13 @@
 #include "Input/Input.h"
 #include "Framework/Particle.h"
 #include "Math/Random.h"
+
+// **Core**
 #include "Core/ETime.h"
+#include "Core/EFile.h"
+#include "Core/json.h"
+
+
 #include "Framework/Color.h"
 #include "Math/MathUtils.h"
 #include "Framework/Model.h"

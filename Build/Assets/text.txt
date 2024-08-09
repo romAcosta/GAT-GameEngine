@@ -1,0 +1,8 @@
+{
+  "name": "Romero",
+  "age": 34,
+  "isAwake": false,
+  "speed":13.5,
+  "position":[1,2],
+  "list":[1,2,3,4]
+}

@@ -11,7 +11,7 @@ void Model::Draw(Renderer& renderer, const Vector2& position, float angle, float
 		Vector2 p1 = m_points[i].Rotate(angle) * scale + position;
 		Vector2 p2 = m_points[i + 1].Rotate(angle) * scale  + position;
 
-		renderer.DrawLine(p1.x, p1.y, p2.x, p2.y);
+		renderer.DrawLine((int)p1.x, (int)p1.y, (int)p2.x, (int)p2.y);
 	}
 }
 
@@ -26,7 +26,7 @@ void Model::Draw(Renderer& renderer, const Transform transform)
 		Vector2 p1 = m_points[i].Rotate(transform.rotation) * transform.scale + transform.position;
 		Vector2 p2 = m_points[i + 1].Rotate(transform.rotation) * transform.scale + transform.position;
 
-		renderer.DrawLine(p1.x, p1.y, p2.x, p2.y);
+		renderer.DrawLine((int) p1.x, (int)p1.y, (int)p2.x, (int)p2.y);
 	}
 }
 
