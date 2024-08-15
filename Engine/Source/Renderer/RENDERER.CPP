@@ -1,6 +1,7 @@
 #include <SDL.h>
 #include "Renderer.h"
 #include <iostream>
+#include "../Framework/Transform.h"
 
 bool Renderer::Initialize()
 {
@@ -118,6 +119,21 @@ void Renderer::DrawTexture(Texture* texture, float x, float y, float angle)
 
 	// https://wiki.libsdl.org/SDL2/SDL_RenderCopyExF
 	SDL_RenderCopyExF(m_renderer, texture->m_texture, NULL, &destRect, angle, NULL, SDL_FLIP_NONE);
+}
+
+void Renderer::DrawTexture(Texture* texture, const Transform& transform, bool hflip)
+{
+	Vector2 size = texture->GetSize() * transform.scale;
+
+	SDL_FRect destRect;
+
+	destRect.x = transform.position.x;
+	destRect.y = transform.position.y;
+	destRect.w = size.x;
+	destRect.h = size.y;
+
+	// https://wiki.libsdl.org/SDL2/SDL_RenderCopyExF
+	SDL_RenderCopyExF(m_renderer, texture->m_texture, NULL, &destRect, transform.rotation, NULL, (hflip) ? SDL_FLIP_HORIZONTAL : SDL_FLIP_NONE);
 }
 
 

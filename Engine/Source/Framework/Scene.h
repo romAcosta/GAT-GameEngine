@@ -1,41 +1,41 @@
 #pragma once
-
+#include "Object.h"
 #include <memory>
 #include <list>
 
 class Renderer;
 class Actor;
+class Engine;
 
 
-class Scene
+class Scene : public Object
 {
 public:
 	Scene() = default;
+	Scene(Engine* engine) {
+		this->engine = engine;
+	}
+
+	CLASS_DECLARATION(Scene);
 
 	void Update(float dt);
 	void Draw( Renderer& renderer);
 
 	void AddActor(std::unique_ptr < Actor> actor);
-	int GetScore() { return score; }
-	void AddScore(int score) { this->score += score; }
-	void GameOver() { game_over = true; }
-	void GameOn() { game_over = false; }
-	bool GetGame() { return game_over; }
-	void Day() { day = true; }
-	void Night() { day = false; }
-	bool GetDay() { return day; }
+	
+	
+	void Initialize() override;
 	
 
 	template<typename T>
 	T* GetActor();
 
+public:
+	Engine* engine{ nullptr };
+
 protected:
 
-	std::list<std::unique_ptr<Actor>> m_actors;
-	int score = 0;
-	bool game_over = false;
-	bool day = false;
-
+	std::list<std::unique_ptr<Actor>> actors;
 
 };
 
@@ -43,7 +43,7 @@ template<typename T>
 T* Scene::GetActor() 
 {
 
-	for (Actor* actor : m_actors) {
+	for (Actor* actor : actors) {
 		T* result = dynamic_cast<T*> (actor);
 		if (result) {return result;}
 	}
