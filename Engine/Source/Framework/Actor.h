@@ -53,6 +53,7 @@ public:
 	friend struct Actors;
 
 public:
+	std::string name;
 	std::string tag;
 	float lifespan = -1;
 	bool destroyed = false;

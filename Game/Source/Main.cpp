@@ -14,6 +14,7 @@ int main(int argc, char* argv[])
 	Factory::Instance().Register<TextureComponent>(TextureComponent::GetTypeName());
 	Factory::Instance().Register<EnginePhysicsComponent>(EnginePhysicsComponent::GetTypeName());
 	Factory::Instance().Register<PlayerComponent>(PlayerComponent::GetTypeName());
+	Factory::Instance().Register<TextComponent>(TextComponent::GetTypeName());
 
 	std::unique_ptr<Engine> engine = std::make_unique<Engine>();
 
@@ -26,9 +27,7 @@ int main(int argc, char* argv[])
 	rapidjson::Document document;
 	Json::Load("Scenes/scene.json", document);
 
-	res_t<Font> font = ResourceManager::Instance().Get<Font>("Finland.ttf", 12);
-	std::unique_ptr<Text> text = std::make_unique<Text>(font);
-	text->Create(engine->GetRenderer(), "Hello!", { 0, 0, 0, 1 });
+	
 	
 
 
@@ -50,18 +49,24 @@ int main(int argc, char* argv[])
 	bool quit = false;
 	while (!quit)
 	{
-		engine->Update();
-		
 		if (engine->GetInput().GetKeyDown(SDL_SCANCODE_ESCAPE)) {
 			quit = true;
 		}
 		
+		
+		
+		engine->Update();
 		scene->Update(engine->GetTime().GetDeltaTime());
 
+		/*auto* actor = scene->GetActor<Actor>();
+		if (actor) {
+			actor->transform.rotation += 0.1f;
+		}*/
 
 		engine->GetRenderer().SetColor(0, 0, 0, 0);
 		engine->GetRenderer().BeginFrame();
 		////////////////////////
+
 
 		scene->Draw(engine->GetRenderer());
 
@@ -69,7 +74,7 @@ int main(int argc, char* argv[])
 		////////////////////////
 		engine->GetRenderer().EndFrame();
 	}
-
+	
 	engine->Shutdown();
 
 

@@ -17,9 +17,11 @@ void Scene::Update(float dt)
 {
 
 	
-		for (auto& actor : actors) {
+	for (auto& actor : actors) {
+		if (actor->active) {
 			actor->Update(dt);
 		}
+	}
 	
 
 

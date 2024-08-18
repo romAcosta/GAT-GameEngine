@@ -40,6 +40,7 @@
 // **Components**
 #include "Components/RenderComponent.h"
 #include "Components/Component.h"
+#include "Components/TextComponent.h"
 #include "Components/TextureComponent.h"
 #include "Components/PhysicsComponent.h"
 #include "Components/EnginePhysicsComponent.h"

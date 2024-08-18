@@ -4,12 +4,14 @@
 #include "../Math/Vector2.h"
 #include "Renderer.h"
 
+struct SDL_Texture;
 
 class Texture : public Resource
 {
 public:
 	Texture() = default;
-	~Texture();
+	Texture(SDL_Texture* texture) : m_texture{texture}{}
+	~Texture() = default;
 
 	bool Load(const std::string& filename, class Renderer& renderer);
 
@@ -21,7 +23,7 @@ public:
 	friend class Renderer;
 
 private:
-	struct SDL_Texture* m_texture{ nullptr };
+	SDL_Texture* m_texture{ nullptr };
 
 	
 };

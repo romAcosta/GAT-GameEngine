@@ -71,7 +71,13 @@ void Actor::Read(const json_t& value)
 			READ_DATA(componentValue, type);
 
 			auto component = Factory::Instance().Create<Component>(type);
+			if(!component){
+				std::cerr << "Could not create component: " << type << std::endl;
+				continue;
+			}
+
 			component->Read(componentValue);
+
 			AddComponent(std::move(component));
 		}
 	}

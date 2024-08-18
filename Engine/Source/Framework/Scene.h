@@ -27,9 +27,8 @@ public:
 	void Initialize() override;
 	
 
-	template<typename T>
-	T* GetActor();
-
+	template<typename T> T* GetActor();
+	template<typename T> T* GetActor(const std::string& name);
 public:
 	Engine* engine{ nullptr };
 
@@ -53,4 +52,14 @@ T* Scene::GetActor()
 	return nullptr;
 
 
+}
+
+template<typename T>
+inline T* Scene::GetActor(const std::string& name)
+{
+	for (Actor* actor : actors) {
+		T* result = dynamic_cast<T*> (actor);
+		if (result  && IsEqualIgnoreCase(result->name , name)) { return result; }
+	}
+	return nullptr;
 }

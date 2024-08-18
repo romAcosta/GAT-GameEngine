@@ -2,10 +2,7 @@
 #include <iostream>
 #include "../Core/EAssert.h"
 
-Texture::~Texture()
-{
-	if (this != nullptr) SDL_DestroyTexture(m_texture);
-}
+
 
 bool Texture::Load(const std::string& filename, Renderer& renderer)
 {
@@ -48,7 +45,7 @@ bool Texture::Create(std::string name, ...)
 {
     va_list args;
     va_start(args, name);
-    Renderer renderer = va_arg(args, Renderer);
+    Renderer& renderer = va_arg(args, Renderer);
     va_end(args);
 
     return Load(name, renderer);
