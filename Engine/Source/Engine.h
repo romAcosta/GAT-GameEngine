@@ -45,6 +45,8 @@
 #include "Components/PhysicsComponent.h"
 #include "Components/EnginePhysicsComponent.h"
 
+// **Physics**
+#include "Physics/Physics.h"
 
 #include <SDL.h>
 #include <SDL_ttf.h>
@@ -61,14 +63,16 @@ public:
 
 	void Update();
 
+	Physics& GetPhysics()   { return *m_physics; }
 
 	Renderer& GetRenderer() { return *m_renderer; }
-	Audio& GetAudio() { return *m_audio; }
-	Input& GetInput() { return *m_input; }
-	Time& GetTime() { return *m_time; }
+	Audio& GetAudio()       { return *m_audio; }
+	Input& GetInput()       { return *m_input; }
+	Time& GetTime()         { return *m_time; }
 
 private:
 
+	std::unique_ptr<Physics>  m_physics;
 	std::unique_ptr<Renderer> m_renderer;
 	std::unique_ptr<Input>	  m_input;
 	std::unique_ptr<Audio>	  m_audio;
