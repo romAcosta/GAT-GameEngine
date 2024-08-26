@@ -16,12 +16,15 @@ public:
 		this->engine = engine;
 	}
 
+	Scene(const Scene& other);
+
 	CLASS_DECLARATION(Scene);
+	CLASS_PROTOTYPE(Scene);
 
 	void Update(float dt);
 	void Draw( Renderer& renderer);
 
-	void AddActor(std::unique_ptr < Actor> actor);
+	void AddActor(std::unique_ptr < Actor> actor, bool initialize = false);
 	
 	
 	void Initialize() override;

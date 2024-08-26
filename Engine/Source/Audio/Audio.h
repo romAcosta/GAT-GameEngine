@@ -23,6 +23,8 @@ public:
 	bool PlaySFX(bool play, const std::string& name);
 	void StopSFX();
 
+	friend class AudioClip;
+	friend class AudioSource;
 private:
 
 	FMOD::System* m_audio{ nullptr };

@@ -4,6 +4,21 @@
 #include "../Core/json.h"
 #include "../Core/Factory.h"
 
+Actor::Actor(const Actor& other)
+{
+	tag = other.tag;
+	name = other.name;
+	lifespan = other.lifespan;
+	destroyed = other.destroyed;
+	transform = other.transform;
+	scene = other.scene;
+
+	for (auto& componenet : other.components) 
+	{
+		auto clone = std::unique_ptr<Component>(dynamic_cast<Component*> (componenet->Clone().release()));
+		AddComponent(std::move(clone));
+	}
+}
 
 void Actor::Initialize()
 {
@@ -14,14 +29,13 @@ void Actor::Initialize()
 
 void Actor::Update(float dt)
 {	
-	/*if (lifespan != -1) {
+	if (lifespan != -1) {
 		lifespan -= dt;
 		if (lifespan <= 0) {
-			m_destroyed = true;
+			destroyed = true;
 		}
 	}
 
-	m_transform.position += (m_velocity * dt );*/
 	
 	for (auto& component : components) {
 		component->Update(dt);
@@ -51,6 +65,7 @@ void Actor::AddComponent(std::unique_ptr<Component> component)
 	components.push_back(std::move(component));
 }
 
+
 void Actor::Write(json_t& value)
 {
 }
@@ -58,7 +73,7 @@ void Actor::Write(json_t& value)
 void Actor::Read(const json_t& value)
 {
 	Object::Read(value);
-
+	
 	READ_DATA(value, tag);
 	READ_DATA(value, lifespan);
 

@@ -1,4 +1,5 @@
 #include "EnginePhysicsComponent.h"
+#include "../Framework/Actor.h"
 
 
 void EnginePhysicsComponent::Initialize()
@@ -22,6 +23,11 @@ void EnginePhysicsComponent::ApplyForce(const Vector2& force)
 void EnginePhysicsComponent::SetPosition(const Vector2& position)
 {
 	owner->transform.position = position; 
+}
+
+void EnginePhysicsComponent::ApplyTorque(float angle)
+{
+	owner->transform.rotation += angle;
 }
 
 

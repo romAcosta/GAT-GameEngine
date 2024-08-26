@@ -1,1 +1,6 @@
-﻿  Game.vcxproj -> C:\neumont\C++\GAT-GameEngine\GAT-Repo\Bin\GameDebug\Game.exe
+﻿  PlayerComponent.cpp
+  RocketComponent.cpp
+  Main.cpp
+  MyGame.cpp
+  Generating Code...
+  Game.vcxproj -> C:\neumont\C++\GAT-GameEngine\GAT-Repo\Bin\GameDebug\Game.exe

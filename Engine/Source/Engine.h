@@ -1,8 +1,14 @@
 #pragma once
 
+
+// **Event**
+#include "Event/EventSystem.h"
+
 // **Input**
 #include "Input/Input.h"
 
+// **Physics**
+#include "Physics/Physics.h"
 
 // **Core**
 #include "Core/ETime.h"
@@ -23,6 +29,7 @@
 #include "Math/MathUtils.h"
 #include "Math/Vector2.h"
 #include "Math/Random.h"
+#include "Math/Rect.h"
 
 
 // **Audio**
@@ -44,9 +51,9 @@
 #include "Components/TextureComponent.h"
 #include "Components/PhysicsComponent.h"
 #include "Components/EnginePhysicsComponent.h"
-
-// **Physics**
-#include "Physics/Physics.h"
+#include "Components/CircleCollisionComponent.h"
+#include "Components/CollisionComponent.h"
+#include "Components/AudioComponent.h"
 
 #include <SDL.h>
 #include <SDL_ttf.h>

@@ -1,2 +1,9 @@
-﻿sdl2_image.lib(SDL2_image.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in sdl2.lib(SDL2.dll); second definition ignored
+﻿  AudioClip.cpp
+  AudioComponent.cpp
+  Box2DPhysicsComponent.cpp
+  TextComponent.cpp
+  TextureComponent.cpp
+  Engine.cpp
+  AudioSource.cpp
+  Generating Code...
   Engine.vcxproj -> C:\neumont\C++\GAT-GameEngine\GAT-Repo\Bin\EngineDebug\Engine.lib

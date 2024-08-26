@@ -1,6 +1,8 @@
 #include "Engine.h"
 #include "Framework/Scene.h"
 #include "Components/PlayerComponent.h"
+#include "Components/RocketComponent.h"
+#include "MyGame.h"
 #include <iostream>
 #include <cstdlib>
 #include <vector>
@@ -10,36 +12,25 @@
 
 int main(int argc, char* argv[])
 {
-	Factory::Instance().Register<Actor>(Actor::GetTypeName());
+	File::SetFilePath("Assets");
+	
+
+	FACTORY_REGISTER(Actor);
 	Factory::Instance().Register<TextureComponent>(TextureComponent::GetTypeName());
 	Factory::Instance().Register<EnginePhysicsComponent>(EnginePhysicsComponent::GetTypeName());
 	Factory::Instance().Register<PlayerComponent>(PlayerComponent::GetTypeName());
 	Factory::Instance().Register<TextComponent>(TextComponent::GetTypeName());
+	Factory::Instance().Register<CircleCollisionComponent>(CircleCollisionComponent::GetTypeName());
+	Factory::Instance().Register<RocketComponent>(RocketComponent::GetTypeName());
+	Factory::Instance().Register<AudioComponent>(AudioComponent::GetTypeName());
+
+
 
 	std::unique_ptr<Engine> engine = std::make_unique<Engine>();
-
 	engine->Initialize();
 
-	
-
-
-	File::SetFilePath("Assets");
-	rapidjson::Document document;
-	Json::Load("Scenes/scene.json", document);
-
-	
-	
-
-
-	
-	
-	
-
-	//Create Systems
-	
-	std::unique_ptr<Scene> scene = std::make_unique<Scene>(engine.get());
-	scene->Read(document);
-	scene->Initialize();
+	std::unique_ptr<Game> game = std::make_unique<Game>(engine.get());
+	game->Initialize();
 
 
 
@@ -52,29 +43,25 @@ int main(int argc, char* argv[])
 		if (engine->GetInput().GetKeyDown(SDL_SCANCODE_ESCAPE)) {
 			quit = true;
 		}
-		
-		
-		
-		engine->Update();
-		scene->Update(engine->GetTime().GetDeltaTime());
 
-		/*auto* actor = scene->GetActor<Actor>();
-		if (actor) {
-			actor->transform.rotation += 0.1f;
-		}*/
+
+
+		engine->Update();
+		game->Update();
+
+
 
 		engine->GetRenderer().SetColor(0, 0, 0, 0);
 		engine->GetRenderer().BeginFrame();
 		////////////////////////
 
-
-		scene->Draw(engine->GetRenderer());
+		game->Draw(engine->GetRenderer());
 
 
 		////////////////////////
 		engine->GetRenderer().EndFrame();
 	}
-	
+
 	engine->Shutdown();
 
 

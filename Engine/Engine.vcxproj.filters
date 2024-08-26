@@ -40,6 +40,9 @@
     <Filter Include="Source Files\Physics">
       <UniqueIdentifier>{5d7bb7ab-0461-4e1c-89bf-071512e5dab1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Event">
+      <UniqueIdentifier>{b1d5f894-9322-4ecb-8d64-460ef6ddfb61}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Engine.h">
@@ -76,9 +79,6 @@
       <Filter>Source Files\Math</Filter>
     </ClInclude>
     <ClInclude Include="Source\Math\Random.h">
-      <Filter>Source Files\Math</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Math\Vector2.h">
       <Filter>Source Files\Math</Filter>
     </ClInclude>
     <ClInclude Include="Source\Renderer\Font.h">
@@ -141,14 +141,47 @@
     <ClInclude Include="Source\Components\TextComponent.h">
       <Filter>Source Files\Components</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Physics\Physics.h">
-      <Filter>Source Files\Physics</Filter>
-    </ClInclude>
     <ClInclude Include="Source\Components\CollisionComponent.h">
       <Filter>Source Files\Components</Filter>
     </ClInclude>
     <ClInclude Include="Source\Components\CircleCollisionComponent.h">
       <Filter>Source Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Event\Event.h">
+      <Filter>Source Files\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Event\Observer.h">
+      <Filter>Source Files\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Event\EventSystem.h">
+      <Filter>Source Files\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Physics\RigidBody.h">
+      <Filter>Source Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Components\Box2DPhysicsComponent.h">
+      <Filter>Source Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Audio\AudioSource.h">
+      <Filter>Source Files\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Components\AudioComponent.h">
+      <Filter>Source Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Math\Rect.h">
+      <Filter>Source Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Components\TileMapComponent.h">
+      <Filter>Source Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Physics\Physics.h">
+      <Filter>Source Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Math\Vector2.h">
+      <Filter>Source Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Audio\AudioClip.h">
+      <Filter>Source Files\Audio</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -218,11 +251,35 @@
     <ClCompile Include="Source\Components\TextComponent.cpp">
       <Filter>Source Files\Components</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Components\CircleCollisionComponent.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Event\Observer.cpp">
+      <Filter>Source Files\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Physics\RigidBody.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Components\Box2DPhysicsComponent.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Audio\AudioSource.cpp">
+      <Filter>Source Files\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Components\AudioComponent.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Event\EventSystem.cpp">
+      <Filter>Source Files\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Components\TileMapComponent.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
     <ClCompile Include="Source\Physics\Physics.cpp">
       <Filter>Source Files\Physics</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Components\CircleCollisionComponent.cpp">
-      <Filter>Source Files\Components</Filter>
+    <ClCompile Include="Source\Audio\AudioClip.cpp">
+      <Filter>Source Files\Audio</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -5,7 +5,7 @@
 class CollisionComponent : public Component
 {
 public:
-	virtual bool CheckCollision(const CollisionComponent const* collision) = 0;
+	virtual bool CheckCollision(const CollisionComponent* collision) = 0;
 
 	
 

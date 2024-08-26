@@ -96,6 +96,59 @@ namespace Json {
 		return false;
 	}
 
+	bool Read(const rapidjson::Value& value, const std::string& name, std::vector<std::string>& data, bool isRequired)
+	{
+		if (!value.HasMember(name.c_str()) || !value[name.c_str()].IsArray())
+		{
+			if (isRequired) std::cerr << "Could not read Json value: " << name << std::endl;
+			return false;
+		}
+
+		// get json array object
+		auto& array = value[name.c_str()];
+		// get array values
+		for (rapidjson::SizeType i = 0; i < array.Size(); i++)
+		{
+			if (!array[i].IsString())
+			{
+				std::cerr << "Could not read Json value: " << name << std::endl;
+				return false;
+			}
+
+			// get the data
+			data.push_back(array[i].GetString());
+		}
+		return false;
+	}
+
+	bool Read(const rapidjson::Value& value, const std::string& name, Rect& data, bool isRequired)
+	{
+		if (!value.HasMember(name.c_str()) || !value[name.c_str()].IsArray() || value[name.c_str()].Size() != 4)
+		{
+			if (isRequired) std::cerr << "Could not read Json value: " << name << std::endl;
+			return false;
+		}
+
+		// get json array object
+		auto& array = value[name.c_str()];
+		// get array values
+
+
+		// get the data
+		data.x = array[0].GetFloat();
+		data.y = array[1].GetFloat();
+		data.w = array[2].GetFloat();
+		data.h = array[3].GetFloat();
+
+	
+		return true;
+	}
+
+	bool Read(const rapidjson::Value& value, const std::string& name, std::vector<int> data, bool isRequired)
+	{
+		return false;
+	}
+
 	bool Read(const rapidjson::Value& value, const std::string& name, Vector2& data, bool isRequired)
 	{
 

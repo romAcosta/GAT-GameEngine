@@ -4,6 +4,8 @@
 #include "Model.h"
 #include "Object.h"
 #include "../Components/Component.h"
+
+#include <functional>
 #include <memory>
 
 class Scene;
@@ -19,17 +21,15 @@ public:
 
 
 	Actor() = default;
-	
 	Actor(const Transform& transform) : transform{ transform }{}
+	Actor(const Actor& other);
 
 	CLASS_DECLARATION(Actor);
+	CLASS_PROTOTYPE(Actor);
 	
+	std::function<void(Actor*)> OnCollisionEnter;
+	std::function<void(Actor*)> OnCollisionExit;
 	
-
-	//Actor(const Transform& transform, Model* model) : 
-	//	m_transform{ transform },
-	//	m_model{model}
-	//	{}
 	virtual void Initialize() override;
 	virtual void Update(float dt);
 	virtual void Draw( Renderer& renderer);
@@ -53,15 +53,13 @@ public:
 	friend struct Actors;
 
 public:
-	std::string name;
+	
 	std::string tag;
 	float lifespan = -1;
 	bool destroyed = false;
 	Transform transform;
 	Scene* scene{ nullptr };
 protected:
-	
-	
 	std::vector<std::unique_ptr<Component>> components;
 };
 

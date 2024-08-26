@@ -1,10 +1,13 @@
 #pragma once
 #include "Singleton.h"
-
+#include "../Framework/Object.h"
 #include<memory>
 #include <map>
 #include <string>
 #include <iostream>
+
+
+
 
 class CreatorBase {
 
@@ -21,12 +24,25 @@ public:
 	}
 };
 
+template<typename T = Object>
+class PrototypeCreator : public CreatorBase {
+public:
+	PrototypeCreator(std::unique_ptr<T> prototype) : m_prototype{ std::move(prototype) } {}
+	std::unique_ptr<class Object> Create() override {
+		return m_prototype->Clone();
+	}
+
+private:
+	std::unique_ptr<T> m_prototype;
+};
+
 class Factory : public Singleton<Factory> {
 
 public:
 	template <typename T> void Register(const std::string& name);
+	template <typename T> void RegisterPrototype(const std::string& name, std::unique_ptr<T> prototype);
 	template <typename T = class Object> std::unique_ptr<T> Create(const std::string& name);
-
+	
 private:
 	std::map<std::string, std::unique_ptr<CreatorBase>>  m_registry;
 
@@ -41,6 +57,12 @@ inline void Factory::Register(const std::string& name)
 }
 
 template<typename T>
+inline void Factory::RegisterPrototype(const std::string& name, std::unique_ptr<T> prototype)
+{
+	m_registry[name] = std::make_unique<PrototypeCreator<T>>(std::move(prototype));
+}
+
+template<typename T>
 inline std::unique_ptr<T> Factory::Create(const std::string& name)
 {
 	if (m_registry.find(name) != m_registry.end()) {
@@ -51,3 +73,5 @@ inline std::unique_ptr<T> Factory::Create(const std::string& name)
 
 	return std::unique_ptr<T>();
 }
+
+

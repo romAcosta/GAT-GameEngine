@@ -5,12 +5,12 @@
             "transform": {
                 "position": [ 60, 60 ],
                 "rotation": 0,
-                "scale": 1
+                "scale": 4
             },
             "components": [
                 {
                     "type": "TextureComponent",
-                    "textureName": "moleup.png"
+                    "textureName": "rocket.png"
                 },
                 {
                     "type": "EnginePhysicsComponent",
@@ -19,6 +19,15 @@
                 {
                     "type": "PlayerComponent",
                     "speed": 1000
+                },
+                {
+                    "type": "CircleCollisionComponent",
+                    "radius": 20
+                },
+                {
+                    "type": "AudioComponent",
+                    "soundName": "roar.wav",
+                    "playOnStart": true
                 }
 
             ]
@@ -33,7 +42,11 @@
             "components": [
                 {
                     "type": "TextureComponent",
-                    "textureName": "moleup.png"
+                    "textureName": "rocket.png"
+                },
+                {
+                    "type": "CircleCollisionComponent",
+                    "radius": 20
                 }
             ]
         },
@@ -50,6 +63,33 @@
                     "fontName": "Finland.ttf",
                     "text": "OH YEAH!",
                     "fontSize": 20
+                }
+            ]
+        },
+        {
+            "name": "rocket",
+            "prototype": true,
+            "transform": {
+                "position": [ 300, 160 ],
+                "rotation": 180,
+                "scale": 2
+            },
+            "components": [
+                {
+                    "type": "TextureComponent",
+                    "textureName": "rocket.png"
+                },
+                {
+                    "type": "CircleCollisionComponent",
+                    "radius": 20
+                },
+                {
+                    "type": "EnginePhysicsComponent",
+                    "damping": 0
+                },
+                {
+                    "type": "RocketComponent",
+                    "speed": 1000
                 }
             ]
         }

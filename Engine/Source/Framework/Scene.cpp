@@ -3,8 +3,14 @@
 #include "Model.h"
 #include "../Core/json.h"
 #include "../Core/Factory.h"
+#include "../Components/CollisionComponent.h"
+#include "../Core/EAssert.h"
 #include "Transform.h"
 #include <algorithm>
+Scene::Scene(const Scene& other)
+{
+	ASSERT(false);
+}
 
 void Scene::Initialize()
 {
@@ -27,27 +33,29 @@ void Scene::Update(float dt)
 
 	
 
-	/*m_actors.erase(
-		std::remove_if(m_actors.begin(), m_actors.end(), [](auto& actor) { return actor->m_destroyed; }), m_actors.end()
-	);*/
+	actors.erase(
+		std::remove_if(actors.begin(), actors.end(), [](auto& actor) { return actor->destroyed; }), actors.end()
+	);
 
 	//collision
+	//for (auto& actor1 : actors) {
+	//	CollisionComponent* collision1 = actor1->GetComponent<CollisionComponent>();
+	//	if (!collision1) continue;
 
-	/*for (auto& actor1 : m_actors) {
-		for (auto& actor2 : m_actors) {
-			if (actor1 == actor2) continue;
-			
-			Vector2 direction = actor1->GetTransform().position - actor2->GetTransform().position;
-			float distance = direction.Length();
+	//	for (auto& actor2 : actors) {
+	//		//dont check with self
+	//		if (actor1 == actor2) continue;
 
-			float radius = actor1->GetRadius() + actor2->GetRadius();
+	//		CollisionComponent* collision2 = actor2->GetComponent<CollisionComponent>();
+	//		if (!collision2) continue;
 
-			if (distance <= radius) {
-				actor1->OnCollision(actor2.get());
-				actor2->OnCollision(actor1.get());
-			}
-		}
-	}*/
+	//		if (collision1->CheckCollision(collision2)) {
+	//			//std::cout << "Hit!\n";
+	//			if (actor1->OnCollisionEnter) actor1->OnCollisionEnter(actor2.get());
+	//			if (actor2->OnCollisionEnter) actor2->OnCollisionEnter(actor1.get());
+	//		}
+	//	}
+	//}
 
 }
 
@@ -60,10 +68,10 @@ void Scene::Draw(Renderer& renderer)
 	
 }
 
-void Scene::AddActor(std::unique_ptr < Actor> actor)
+void Scene::AddActor(std::unique_ptr < Actor> actor, bool initialize)
 {
 	actor-> scene = this;
-	
+	if (initialize) actor->Initialize();
 	actors.push_back(std::move(actor));
 }
 
@@ -72,10 +80,21 @@ void Scene::Read(const json_t& value) {
 		for (auto& actorValue : GET_DATA(value, actors).GetArray()) {
 			auto actor = Factory::Instance().Create<Actor>(Actor::GetTypeName());
 			actor->Read(actorValue);
-			AddActor(std::move(actor));
+
+			bool prototype = false;
+			READ_DATA(actorValue, prototype);
+			if (prototype) {
+				std::string name = actor->name;
+				Factory::Instance().RegisterPrototype<Actor>(name, std::move(actor));
+			}
+			else {
+				AddActor(std::move(actor));
+			}
+
 		}
 	}
 }
+
 
 void Scene::Write(json_t& value)
 {

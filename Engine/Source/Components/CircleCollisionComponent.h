@@ -5,7 +5,8 @@ class CircleCollisionComponent : public CollisionComponent
 {
 public:
 	CLASS_DECLARATION(CircleCollisionComponent);
-	//void Initialize() override;
+	CLASS_PROTOTYPE(CircleCollisionComponent);
+	
 
 
 
@@ -17,7 +18,7 @@ public:
 	// Inherited via CollisionComponent
 	void Update(float dt) override;
 
-	bool CheckCollision(const CollisionComponent const* collision) override;
+	bool CheckCollision(const CollisionComponent* collision) override;
 
 
 	// Inherited via CollisionComponent
