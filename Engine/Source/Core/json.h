@@ -22,9 +22,10 @@ namespace Json
 	bool Read(const rapidjson::Value& value, const std::string& name, std::string& data, bool isRequired = false);
 	bool Read(const rapidjson::Value& value, const std::string& name, float& data, bool isRequired = false);
 	bool Read(const rapidjson::Value& value, const std::string& name, Vector2& data, bool isRequired = false);
+	bool Read(const rapidjson::Value& value, const std::string& name, std::vector<std::string>& data, bool isRequired = false);
 	bool Read(const rapidjson::Value& value, const std::string& name, std::vector<int>& data, bool isRequired = false);
 	bool Read(const rapidjson::Value& value, const std::string& name, Rect& data, bool isRequired = false);
-	bool Read(const rapidjson::Value& value, const std::string& name, std::vector<std::string>& data, bool isRequired = false);
+	
 	
 }
 

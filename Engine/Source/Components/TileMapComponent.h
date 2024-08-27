@@ -8,7 +8,7 @@ class TileMapComponent : public Component {
 public:
 	TileMapComponent() = default;
 
-	CLASS_DECLARATION(TextureComponent);
+	CLASS_DECLARATION(TileMapComponent);
 	
 
 	void Initialize() override;
@@ -22,5 +22,9 @@ public:
 
 	std::vector<std::string> tileNames;
 	std::vector<int> tiles;
+
+
+	// Inherited via Component
+	std::unique_ptr<Object> Clone() override;
 
 };

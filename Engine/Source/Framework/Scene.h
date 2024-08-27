@@ -25,7 +25,7 @@ public:
 	void Draw( Renderer& renderer);
 
 	void AddActor(std::unique_ptr < Actor> actor, bool initialize = false);
-	
+	void RemoveAll();
 	
 	void Initialize() override;
 	

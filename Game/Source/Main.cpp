@@ -23,8 +23,8 @@ int main(int argc, char* argv[])
 	Factory::Instance().Register<CircleCollisionComponent>(CircleCollisionComponent::GetTypeName());
 	Factory::Instance().Register<RocketComponent>(RocketComponent::GetTypeName());
 	Factory::Instance().Register<AudioComponent>(AudioComponent::GetTypeName());
-
-
+	Factory::Instance().Register<TileMapComponent>(TileMapComponent::GetTypeName());
+	Factory::Instance().Register<TextureAnimationComponent>(TextureAnimationComponent::GetTypeName());
 
 	std::unique_ptr<Engine> engine = std::make_unique<Engine>();
 	engine->Initialize();
@@ -62,6 +62,7 @@ int main(int argc, char* argv[])
 		engine->GetRenderer().EndFrame();
 	}
 
+	game->Shutdown();
 	engine->Shutdown();
 
 

@@ -54,6 +54,10 @@
 #include "Components/CircleCollisionComponent.h"
 #include "Components/CollisionComponent.h"
 #include "Components/AudioComponent.h"
+#include "Components/TileMapComponent.h"
+#include "Components/TextureAnimationComponent.h"
+
+
 
 #include <SDL.h>
 #include <SDL_ttf.h>

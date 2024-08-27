@@ -6,6 +6,7 @@ void PlayerComponent::Initialize()
 {
 }
 
+float firespeed = 0;
 void PlayerComponent::Update(float dt)
 {
 	Vector2 direction{ 0,0 };
@@ -17,13 +18,14 @@ void PlayerComponent::Update(float dt)
 	
 	owner->GetComponent<PhysicsComponent>()->ApplyForce(direction * speed);
 
-	if (owner->scene->engine->GetInput().GetKeyDown(SDL_SCANCODE_SPACE)) {
+	if (owner->scene->engine->GetInput().GetKeyDown(SDL_SCANCODE_SPACE)  && firespeed <= 0) {
 		auto rocket = Factory::Instance().Create<Actor>("rocket");
 		rocket->transform.position = owner->transform.position;
 		rocket->transform.rotation = owner->transform.rotation;
-
 		owner->scene->AddActor(std::move(rocket), true);
+		firespeed = 1;
 	}
+	firespeed -= dt;
 }
 
 void PlayerComponent::OnCollisionEnter(Actor* actor)

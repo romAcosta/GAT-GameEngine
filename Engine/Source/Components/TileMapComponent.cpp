@@ -3,6 +3,8 @@
 #include "../Framework/Actor.h"
 #include "../Framework/Scene.h"
 
+
+
 void TileMapComponent::Read(const json_t& value)
 {
 	READ_DATA(value, numColumns);
@@ -39,4 +41,9 @@ void TileMapComponent::Initialize()
 
 void TileMapComponent::Update(float dt)
 {
+}
+
+std::unique_ptr<Object> TileMapComponent::Clone()
+{
+	return std::unique_ptr<Object>();
 }

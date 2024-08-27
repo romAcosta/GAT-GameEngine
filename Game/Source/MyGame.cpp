@@ -15,7 +15,7 @@ void Game::Initialize()
 	Json::Load("Scenes/scene.json", document);
 	
 	scene = std::make_unique<Scene>(m_engine);
-	std::string sceneNames[] = {  "Scenes/scene.json" };
+	std::string sceneNames[] = {  "Scenes/tilemap.json","Scenes/scene.json" };
 	for (std::string name : sceneNames) {
 		rapidjson::Document document;
 		Json::Load(name, document);
@@ -30,7 +30,7 @@ void Game::Initialize()
 
 void Game::Shutdown()
 {
-
+	scene->RemoveAll();
 }
 
 void Game::Draw(Renderer& renderer)

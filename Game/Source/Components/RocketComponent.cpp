@@ -6,11 +6,17 @@ void RocketComponent::Initialize()
 {
 }
 
+
 void RocketComponent::Update(float dt)
 {
 
 	
 	owner->GetComponent<PhysicsComponent>()->ApplyForce(owner->transform.Forward() * speed);
+	auto audio = owner->GetComponent<AudioComponent>();
+	if (owner->lifespan >= 1.4){
+		audio->Play();
+	}
+	
 
 }
 

@@ -75,6 +75,11 @@ void Scene::AddActor(std::unique_ptr < Actor> actor, bool initialize)
 	actors.push_back(std::move(actor));
 }
 
+void Scene::RemoveAll()
+{
+	actors.clear();
+}
+
 void Scene::Read(const json_t& value) {
 	if (HAS_DATA(value, actors) && GET_DATA(value, actors).IsArray()) {
 		for (auto& actorValue : GET_DATA(value, actors).GetArray()) {

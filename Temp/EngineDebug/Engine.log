@@ -1,9 +1,4 @@
-﻿  AudioClip.cpp
-  AudioComponent.cpp
-  Box2DPhysicsComponent.cpp
-  TextComponent.cpp
-  TextureComponent.cpp
-  Engine.cpp
-  AudioSource.cpp
-  Generating Code...
+﻿  TextureAnimationComponent.cpp
+C:\neumont\C++\GAT-GameEngine\GAT-Repo\Engine\Source\Components\TextureAnimationComponent.cpp(29,26): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\neumont\C++\GAT-GameEngine\GAT-Repo\Engine\Source\Components\TextureAnimationComponent.cpp(30,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
   Engine.vcxproj -> C:\neumont\C++\GAT-GameEngine\GAT-Repo\Bin\EngineDebug\Engine.lib
